@@ -1,0 +1,106 @@
+body {
+	margin: 0;
+	padding: 20px 20px 10px;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: #e0f7fa;
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+	color: #004d40;
+}
+
+#countdown-container {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #b2dfdb;
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px solid #80cbc4;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+#countdown {
+	font-size: 2em;
+	text-align: center;
+}
+
+#current-time {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 1em;
+	color: #004d40;
+}
+
+#holiday-list-container {
+	overflow-x: auto;
+	background-color: #b2dfdb;
+	display: flex;
+	align-items: center;
+	border: 2px solid #80cbc4;
+	padding: 20px 10px;
+	border-radius: 10px;
+}
+
+#holiday-list {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#holiday-list li {
+	cursor: pointer;
+	padding: 10px;
+	margin: 0 5px;
+	background-color: #80cbc4;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+	white-space: nowrap;
+	color: #004d40;
+}
+
+#holiday-list li:hover {
+	background-color: #4db6ac;
+}
+
+#holiday-list li.selected {
+	background-color: #4db6ac;
+	color: #ffffff;
+}
+
+#footer {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 0.9em;
+	color: #004d40;
+}
+
+::-webkit-scrollbar-track-piece {
+	background: rgba(0, 77, 64, 0.1);
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 77, 64, 0.2);
+	border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+	#countdown {
+		font-size: 1.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		line-height: 1.5;
+	}
+}
